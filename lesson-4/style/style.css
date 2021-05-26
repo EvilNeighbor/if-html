@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,31 +7,58 @@
 }
 
 .container {
-	max-width: 1280px;
+	max-width: 1240px;
 	margin: 0 auto;
+}
+
+.advantages {
+	padding: 120px 0;
 }
 
 h2 {
 	text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto';
+	font-weight: 500;
 }
 
 h2:after {
 	content: '';
 	display: block;
-	height: 3px;
-	width: 50px;
+	height: 4px;
+	width: 100px;
 	margin: 0 auto;
-	background-color: orange;
+	margin-top: 20px;
+	background: #F5BD41;
+
 }
 
-.content-wrapper {
+.advantages-wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-top: 80px;
 }
 
-.content-wrapper__item {
-	width: 50px;
-	height: 50px;
-	border: 1px solid black;
+.advantages-item {
+	/* height: 250px; */
+	/* display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end; */
+}
+
+.advantages-item>img {
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+.advantages-item__subtitle {
+	font-family: 'Roboto';
+	font-size: 24px;
+	text-align: center;
+	margin-top: 45px;
+	/* align-self: end; */
 }
