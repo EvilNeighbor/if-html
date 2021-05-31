@@ -1,0 +1,49 @@
+@media (min-width: 1200px) {	}
+@media (max-width: 1199px) {	}
+@media (max-width: 991px) {	}
+@media (max-width: 767px) {	}
+@media	(max-width: 575px) {	
+	.advantages {
+		padding: 24px 0 40px 0;
+		&-title {
+			font-size: 28px;
+			line-height: 33px;
+			&:after {
+				display: none;
+			}
+		}
+		&-wrapper {
+			flex-direction: column;
+			margin-top: 32px;
+		}
+		&-item {
+			margin-top: 32px;
+			&:first-child {
+				margin-top: 0;
+			}
+			img {
+				width: 70px;
+				height: 70px;
+			}
+			&__subtitle {
+				font-size: 15px;
+				margin-top: 16px;
+			}
+		}
+	}
+	footer {
+		padding: 40px 68px;
+		.container {
+			max-width: 225px;
+			padding: 0;
+		}
+		h4 {
+			display: block;
+			text-align: center;
+			font-family: 'Baloo 2', cursive;
+			font-weight: 500;
+			font-size: 22px;
+		}
+	}
+	
+}
