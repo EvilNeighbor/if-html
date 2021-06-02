@@ -1,5 +1,5 @@
 @import url(fonts.css);
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap');
 
 
 * {
@@ -21,16 +21,24 @@ a {
 .main {
 	padding: 50px 0px 120px;
 	background: url(../img/main-bg.png) center  (center/cover) no-repeat;
-	height: 100vh;
+	min-height: 100vh;
 	.header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		&-logo {
-			&:hover {
-				box-shadow:0px 0px 31px 0px rgba(255,255,255,1);
-				transition: ease-in-out 0.2s;
-			}
+			a {
+				font-family: 'Baloo 2', cursive;
+				font-weight: 700;
+				color:#3077C6;
+				font-size: 48px;
+				letter-spacing: -1px ;				
+					&:hover {
+					transition: ease-in-out 0.2s;
+					text-shadow: 0px 0px 6px rgba(236, 52, 52, 0.9);
+					
+				}
+			}			
 		}
 		&-links {
 			margin-left: auto;
@@ -88,30 +96,24 @@ a {
 		}
 	}
 	&-form {
-		position: relative;
-		background-color: #fff !important;
+		background-color: #fff;
 		border-radius: 8px;
 		margin-top: 24px;
+		display: flex;		
 		input {
-			padding: 14px 24px;
+			padding: 16px 24px;
 			border-radius: 8px;
 			font-size: 18px;
 			border:3px solid transparent;
 			outline:none;
-			position: absolute;
-			height: 100%;
 			&:nth-child(1) {
-				left: 0;
-				top: 0;
-				width: 465px;
+				width: 35%;
 			}
 			&:nth-child(2) {
-				left: 465px;
-				width: 257px;
+				width: 25%;
 			}
 			&:nth-child(3) {
-				left: 722px;
-				width: 318px;
+				width: 25%;
 			}
 			&:focus {
 					border:3px solid #F5BD41;			
@@ -124,8 +126,6 @@ a {
 			background-color: #3077C6;
 			color: #fff;
 			border:3px solid transparent;
-			position: relative;
-			left: 1040px;
 			&:hover {
 				cursor: pointer;
 			}
