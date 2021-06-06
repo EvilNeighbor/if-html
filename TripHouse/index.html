@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/datepicker.css">
+	<link rel="stylesheet" href="css/chief-slider-with-prefixes.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>CSS</title>
+</head>
+
+<body>
+	<section class="main">
+		<div class="container">
+			<header class="header">
+				<div class="header-logo">
+					<a href="#">TripHouse</a>
+				</div>
+				<div class="header-links">
+					<a href="#">Stays</a>
+					<a href="#">Attractions</a>
+				</div>
+				<div class="header-icons">
+					<img src="img/icons/Night.svg" alt="">
+					<img src="img/icons/account.svg" alt="">
+				</div>
+			</header>
+			<h1 class="main-title">Discover stays <br>
+				to live, work or just relax</h1>
+			<form action="/" class="main-form">
+				<label for="city">Your destination or hotel name</label>
+				<label for="date">Check-in — Check-out</label>
+				<input type="text" id="city" placeholder="New York">
+				<input type="text" id="date" placeholder="Tue 15 Sept — Sat 19 Sept" data-range="true"
+					data-multiple-dates-separator=" - " class="datepicker-here">
+				<input type="text" placeholder="2 Adults — 0 Children — 1 Room" id="choice">
+				<button class="button">Search</button>
+			</form>
+			<div class="main-download">
+				<a href="">
+					<img src="img/playmarket.png" alt="playmarket">
+				</a>
+				<a href="">
+					<img src="img/appstore.png" alt="appstore">
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- Section - Main -->
+	<section class="advantages">
+		<div class="container">
+			<h2 class="advantages-title">What do we offer</h2>
+			<div class="advantages-wrapper">
+				<div class="advantages-item">
+					<svg class="advantages-icon">
+						<use xlink:href="img/sprite.svg#hear"></use>
+					</svg>
+					<div class="advantages-item__subtitle">Support 24/7</div>
+				</div>
+				<div class="advantages-item">
+					<svg class="advantages-icon">
+						<use xlink:href="img/sprite.svg#communicate"></use>
+					</svg>
+					<div class="advantages-item__subtitle">Communicate directly</div>
+				</div>
+				<div class="advantages-item">
+					<svg class="advantages-icon">
+						<use xlink:href="img/sprite.svg#booking"></use>
+					</svg>
+					<div class="advantages-item__subtitle">Book online</div>
+				</div>
+				<div class="advantages-item">
+					<svg class="advantages-icon">
+						<use xlink:href="img/sprite.svg#ok"></use>
+					</svg>
+					<div class="advantages-item__subtitle">Real guest reviews</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Section - Advantages  -->
+	<!--Section - favorite -->
+	<section class="favorite">
+		<div class="container">
+			<h2>Homes guests loves</h2>
+
+			<div class="favorite-wrapper">
+				<div class="favorite-item">
+					<a href="#">
+						<div class="favorite-item__img">
+							<img src="img/favorite/hotel.png" alt="hotel">
+						</div>
+						<div class="favorite-item__title">Hotel Leopold</div>
+						<div class="favorite-item__descr">Saint Petersburg, Russia</div>
+					</a>
+				</div>
+				<div class="favorite-item">
+					<a href="#">
+						<div class="favorite-item__img">
+							<img src="img/favorite/apartament.png" alt="apartament">
+						</div>
+						<div class="favorite-item__title">Apartment Sunshine</div>
+						<div class="favorite-item__descr">Santa Cruz de Tenerife, Spain</div>
+					</a>
+				</div>
+				<div class="favorite-item">
+					<a href="#">
+						<div class="favorite-item__img">
+							<img src="img/favorite/villa.png" alt="villa">
+						</div>
+						<div class="favorite-item__title">Villa Kunerad</div>
+						<div class="favorite-item__descr">Vysokie Tatry, Slowakia</div>
+					</a>
+				</div>
+				<div class="favorite-item">
+					<a href="#">
+						<div class="favorite-item__img">
+							<img src="img/favorite/hostel.png" alt="hostel">
+						</div>
+						<div class="favorite-item__title">Hostel Friendship</div>
+						<div class="favorite-item__descr">Berlin, Germany</div>
+					</a>
+				</div>
+				<div class="arrow  arrow__right">
+					<span class="icon-chevron-thin-right"></span>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!--Section - favorite -->
+	<!-- Section - reviews -->
+	<section class="reviews">
+		<div class="container">
+			<h2>Guests reviews</h2>
+			<div class="reviews-wrapper">
+				<div class="reviews-box">
+					<div class="reviews-box__background">
+						<img src="img/reviews/image.png" alt="hotel">
+						<span>From 250 USD</span>
+					</div>
+					<div class="wrapper">
+						<div class="reviews-box__rating">
+							<div class="locate">
+								<span class="locate-name">Ubud Bali Resort&SPA</span>
+								<span class="locate-box">9,4</span>
+							</div>
+							<div class="rating">
+								<span class="rating-place">Bali, Indonesia</span>
+								<span class="rating-reviews">1324 reviews</span>
+							</div>
+						</div>
+						<div class="reviews-box__comment">
+							<div class="avatar">
+								<svg class="author__avatar">
+									<use xlink:href="img/sprite.svg#avatar"></use>
+								</svg>
+							</div>
+							<div class="author">
+								<span class="author-name">Hanna Ivanova</span>
+								<span class="author-nation"><img src="img/reviews/ua.ico" alt=""> Ukraine</span>
+							</div>
+							<p>Great location, really pleasant and clean rooms, but the thing that makes this such a good place to
+								stay are
+								the staff. All of the people are incredibly helpful and generous with their time and advice. </p>
+						</div>
+					</div>
+
+				</div>
+				<div class="reviews-box">
+					<div class="reviews-box__background">
+						<img src="img/reviews/image-1.png" alt="hotel">
+						<span>From 40 USD</span>
+					</div>
+					<div class="wrapper">
+						<div class="reviews-box__rating">
+							<div class="locate">
+								<span class="locate-name">King Kong Hostel</span>
+								<span class="locate-box">8,9</span>
+							</div>
+							<div class="rating">
+								<span class="rating-place">Rotterdam, Netherlands</span>
+								<span class="rating-reviews">2016 reviews</span>
+							</div>
+						</div>
+						<div class="reviews-box__comment">
+							<div class="avatar">
+								<img src="img/reviews/avatar.svg" alt="">
+							</div>
+							<div class="author">
+								<span class="author-name">Adam Smith</span>
+								<span class="author-nation"><img src="img/reviews/usa.ico" alt=""> USA</span>
+							</div>
+							<p>I've been in this hostel for a month and here is the best hostel of all
+								Excellent management of excellent and ethical staff and bedrooms Bathrooms are always clean and
+								excellent
+								Most importantly, those who work here are kind and good-natured. </p>
+						</div>
+					</div>
+				</div>
+				<div class="reviews-box">
+					<div class="reviews-box__background">
+						<img src="img/reviews/image-2.png" alt="hotel">
+						<span>From 100 USD</span>
+					</div>
+					<div class="wrapper">
+						<div class="reviews-box__rating">
+							<div class="locate">
+								<span class="locate-name">Rokoko Hotel</span>
+								<span class="locate-box">9,1</span>
+							</div>
+							<div class="rating">
+								<span class="rating-place">Ourika, Marocco</span>
+								<span class="rating-reviews">815 reviews</span>
+							</div>
+						</div>
+						<div class="reviews-box__comment">
+							<div class="avatar">
+								<img src="img/reviews/avatar.svg" alt="">
+							</div>
+							<div class="author">
+								<span class="author-name">Anika Messer</span>
+								<span class="author-nation"><img src="img/reviews/ger.ico" alt=""> Germany</span>
+							</div>
+							<p>Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location. Easy
+								access
+								to all the surrounding historical sites. Staff is fantastic. Will definitely stay at this location
+								during my
+								next stay in Marocco.</p>
+						</div>
+					</div>
+				</div>
+				<div class="arrow  arrow__right">
+					<span class="icon-chevron-thin-right"></span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer  -->
+	<footer>
+		<div class="container">
+			<h4>TripHouse</h4>
+			<div class="footer-wrapper">
+				<div class="footer-box">
+					<ul class="footer-links">
+						<li><a href="#">About</a></li>
+						<li><a href="#">How Triphouse works</a></li>
+						<li><a href="#">Careers</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Terms</a></li>
+					</ul>
+				</div>
+				<div class="footer-box">
+					<ul class="footer-links">
+						<li><a href="#">Property types</a></li>
+						<li><a href="#">Guest houses</a></li>
+						<li><a href="#">Hotels</a></li>
+						<li><a href="#">Apartments</a></li>
+						<li><a href="#">Villas</a></li>
+						<li><a href="#">Holiday homes</a></li>
+						<li><a href="#">Hostels</a></li>
+					</ul>
+				</div>
+				<div class="footer-box">
+					<ul class="footer-links">
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Contact Customer Service</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+			<p>&#169; 2020 Triphouse, Inc. All rights reserved</p>
+		</div>
+	</footer>
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/datapicker.js"></script>
+	<script src="js/chief-slider.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
