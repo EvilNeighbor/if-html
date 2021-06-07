@@ -13,10 +13,6 @@ a {
 	text-decoration: none;
 }
 
-.slider__item {
-  flex: 0 0 23%;
-  max-width: 23%;
-}
 
 .container {
   max-width: 1264px;
@@ -214,38 +210,38 @@ h2 {
   margin-top: 45px;
 }
 
-	.arrow {
-		width: 40px;
-		height: 40px;
-		border-radius: 100%;
-		background:#F3F3F4;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: absolute;
-		font-size: 20px;
-		transition: all 0.2s ;
+.arrow {
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background:#F3F3F4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	font-size: 20px;
+	transition: all 0.2s ;
 
-		&__right {		
-			right: -1.75%;
-			top: 148px;
-			transform: translateY(-50%);
-		}
-		&__left {
-			top: 148px;
-			transform: translateY(-50%);
-			left: -20px;
-		}		
-		&:hover {
-			background-color: #3077C6;
-			cursor: pointer;
-			
-		}
-		&:hover span {
-			color: #fff;
-			transition: all 0.2s ;
-			}
+	&__right {		
+		right: 0;
+		top: 148px;
+		transform: translate(41%, -50%);
 	}
+	&__left {
+		top: 148px;
+		transform: translateY(-50%);
+		left: -20px;
+	}		
+	&:hover {
+		background-color: #3077C6;
+		cursor: pointer;
+		
+	}
+	&:hover span {
+		color: #fff;
+		transition: all 0.2s ;
+		}
+}
 
 .favorite {
 	background-color: #EAF0F9;
@@ -258,21 +254,16 @@ h2 {
 		margin-top: 104px;
 	}
 	&-item {
-			overflow: hidden;
-			
-			&:hover img {
-			transform: scale(1.05);
-			transition: ease-in 0.2s;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
-		&__img {
-			display: inline-block;
-			img {
-				overflow: hidden;
-			}		
-			
+
+		&:hover {
+			cursor: pointer;
 		}
-		
-	
+
 		&__title {
 			color: #3077C6;	
 			font-size: 24px;
@@ -303,7 +294,7 @@ h2 {
 
 			&__right {		
 				top: 200px;
-				transform: translateY(-50%);
+				transform: translate(40%, -50%);
 			}
 	}
 
