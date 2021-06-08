@@ -1,0 +1,140 @@
+@media (max-width: 1264px) {
+	h2 {
+		font-size: calc( (100vw - 360px)/(1264 - 360) * (40 - 28) + 28px);
+	}
+	.main {
+		&-title {
+			font-size: calc( (100vw - 360px)/(1264 - 360) * (50 - 30) + 30px);
+		}
+	}
+	.advantages {
+		padding-top: calc(24px + (120 - 24) * ((100vw - 360px  ) / (1264 - 360))) ;
+		padding-bottom: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360))) ;
+		&-wrapper {
+			margin-top: calc(32px + (80 - 32) * ((100vw - 360px  ) / (1264 - 360))) ;
+		}
+		&-item {
+			&__subtitle {
+				 font-size: calc(15px + (24 - 15) * ((100vw - 360px  ) / (1264 - 360))) ;	
+				 margin-top: calc(16px + (45 - 16) * ((100vw - 360px  ) / (1264 - 360))) ;
+			}
+		}
+	}
+	footer {
+		padding-top: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360))) ;
+		padding-bottom: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360))) ;
+		.footer-links {
+			a {
+				font-size: calc( (100vw - 360px)/(1264 - 360) * (20 - 15) + 15px) !important;
+			}
+		}
+	}
+}
+@media (max-width: 1199px) {	}
+@media (max-width: 991px) {
+	.advantages {
+		&-wrapper {
+			flex-wrap: wrap;
+			justify-content: center;
+			.advantages-item {
+				flex-basis: 35%;
+				margin-top: 30px ;
+			}
+		}
+
+	}
+	}
+@media (max-width: 767px) {	
+	
+}
+@media	(max-width: 575px) {
+	.main {
+		&-title {
+			margin-top: 80px;
+		}
+		.header {
+			flex-direction: column;
+			&-links {
+				margin: auto;
+				a:last-child  {
+					margin-right: 0;
+				}
+			}
+			&-icons {
+				display: none;
+			}
+		}
+		label {
+			display: none;
+		}
+		form {
+			display: none;
+		}
+	}	
+	.advantages {
+		&-title {
+			line-height: 33px;
+			&:after {
+				display: none;
+			}
+		}
+		&-wrapper {
+			flex-direction: column;
+		}
+		&-item {
+			margin-top: 32px;
+			&:first-child {
+				margin-top: 0;
+			}
+			img {
+				width: 70px;
+				height: 70px;
+			}
+			&__subtitle {
+				font-size: 15px;
+				margin-top: 16px;
+			}
+		}
+		&-icon {
+				width: 70px;
+				height: 70px;
+		}
+	}
+	footer {
+		// padding: 40px 68px;
+		.container {
+			max-width: 225px;
+			padding: 0;
+		}
+		h4 {
+			display: block;
+			text-align: center;
+			font-family: 'Baloo 2', cursive;
+			font-weight: 500;
+			font-size: 22px;
+		}		
+		p {
+			font-size: 12px;
+			margin-top: 29px;
+		}
+		.footer-box {
+			width: auto;
+			margin-top: 27px;
+		}
+		.footer-wrapper {
+			.footer-links {
+				li:first-child a{
+					text-decoration: underline;
+					font-size: 15px;
+				}
+				li:not(:first-child) {
+					display: none;				
+				}
+				a:after {
+					display: none;
+				}
+			}
+		}
+	}
+	
+}
