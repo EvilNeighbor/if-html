@@ -116,16 +116,22 @@ a {
 		position: relative;
 
 		#city {
-				flex-basis: 40%;
+				// flex-basis: 40%;
+				flex: 0 0 40%;
+				// flex-grow: 2;
 			}	
 
 		#date {
-				flex-basis: 20%;
-				border:3px solid #F5BD41;	
+				// flex-basis: 20%;
+				border:3px solid #F5BD41;
+				// flex: 1 1 20%;	
+				flex: 0 0 20%;
 			}
 
 		#choice {
-				flex-basis: 25%;
+				// flex-basis: 25%;
+				// flex: 1 1 20%;
+				flex: 0 0 25%;
 			} 
 
 		input {
@@ -134,11 +140,14 @@ a {
 			font-size: 18px;
 			border:3px solid transparent;
 			outline:none;	
+			width: 100%;
 		
 		}
 		.button {
+			flex: 0 0 16%;
 			font-size: 24px;
-			padding: 14px 57px;
+			// padding: 14px 57px;
+			// flex-basis: 20%;
 			border-radius: 8px;
 			background-color: #3077C6;
 			color: #fff;
