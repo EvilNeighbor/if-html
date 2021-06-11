@@ -1,7 +1,8 @@
 @import url(fonts.css);
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap');
+@import "variables";
 
-
+// General style start
 * {
   margin: 0;
   padding: 0;
@@ -9,16 +10,64 @@
 	font-family: "Roboto";
 }
 
+
 a {
-	text-decoration: none;
+	text-decoration: none; 
 }
 
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Roboto";
+  font-weight: 500;
+}
 
 .container {
   max-width: 1264px;
   margin: 0 auto;
   padding: 0 16px;
 }
+ul {
+	list-style: none;
+}
+
+.arrow {
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background:#F3F3F4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	font-size: 20px;
+	transition: all 0.2s ;
+
+	&__right {		
+		right: 0;
+		top: 148px;
+		transform: translate(41%, -50%);
+	}
+
+	&__left {
+		top: 148px;
+		transform: translateY(-50%);
+		left: -20px;
+	}		
+
+	&:hover {
+		background-color: $maincolor;
+		cursor: pointer;				
+	}
+
+	&:hover span {
+		color: #fff;
+		transition: all 0.2s ;
+	}
+}
+ // General style end 
+
+// Main start
 .main {
 	padding: 50px 0px 120px;
 	background: url(../img/main-bg.png) center  (center/cover) no-repeat;
@@ -34,7 +83,7 @@ a {
 			a {
 				font-family: 'Baloo 2', cursive;
 				font-weight: 700;
-				color:#3077C6;
+				color: $maincolor;
 				font-size: 48px;
 				letter-spacing: -1px ;
 
@@ -62,9 +111,9 @@ a {
 					&:after {
 						content: "";
 						height: 3px;
-						background-color: #F5BD41;
+						background-color: $border;
 						display: block;
-						width: 95%;
+						width: 92%;
 						transform:  translateY(12px) scale(0) ;				
 						margin: 0 auto;	
 					}
@@ -123,7 +172,7 @@ a {
 
 		#date {
 				// flex-basis: 20%;
-				border:3px solid #F5BD41;
+				border:3px solid $border;
 				// flex: 1 1 20%;	
 				flex: 0 0 20%;
 			}
@@ -149,7 +198,7 @@ a {
 			// padding: 14px 57px;
 			// flex-basis: 20%;
 			border-radius: 8px;
-			background-color: #3077C6;
+			background-color: $maincolor;
 			color: #fff;
 			border:3px solid transparent;
 			&:hover {
@@ -166,22 +215,18 @@ a {
 		}
 	}
 }
+// Main end
+
+// Advatages start
 .advantages {
 	padding: 120px 0;
   
 	&-icon {
 		text-align: center;
-		fill: #3077C6;
+		fill: $maincolor;
 		width: 100px;
 		height: 100px;
 	}
-}
-
-h2 {
-  text-align: center;
-  font-size: 40px;
-  font-family: "Roboto";
-  font-weight: 500;
 }
 
 .advantages-title:after {
@@ -191,7 +236,7 @@ h2 {
   width: 100px;
   margin: 0 auto;
   margin-top: 20px;
-  background: #f5bd41;
+  background: $border;
 }
 
 .advantages-wrapper {
@@ -218,40 +263,9 @@ h2 {
   text-align: center;
   margin-top: 45px;
 }
+// Advantages end
 
-.arrow {
-	width: 40px;
-	height: 40px;
-	border-radius: 100%;
-	background:#F3F3F4;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	font-size: 20px;
-	transition: all 0.2s ;
-
-	&__right {		
-		right: 0;
-		top: 148px;
-		transform: translate(41%, -50%);
-	}
-	&__left {
-		top: 148px;
-		transform: translateY(-50%);
-		left: -20px;
-	}		
-	&:hover {
-		background-color: #3077C6;
-		cursor: pointer;
-		
-	}
-	&:hover span {
-		color: #fff;
-		transition: all 0.2s ;
-		}
-}
-
+// Favorite start
 .favorite {
 	background-color: #EAF0F9;
 	padding: 120px 0;
@@ -263,10 +277,15 @@ h2 {
 		margin-top: 104px;
 	}
 	&-item {
+		&__img {
+		max-height: 296px;
+		overflow: hidden;
+		}
 		img {
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			display: block;
+			// object-fit: cover;
 		}
 
 		&:hover {
@@ -274,7 +293,7 @@ h2 {
 		}
 
 		&__title {
-			color: #3077C6;	
+			color: $maincolor;	
 			font-size: 24px;
 			line-height: 28px;
 			margin-top: 24px;
@@ -284,12 +303,135 @@ h2 {
 			margin-top: 24px;
 			font-size: 24px;
 			line-height: 28px;
-			color: #BFBFBF;
+			color: $sectext;
 			max-width: 300px;
 		}
 	}
-
 }
+// Favorite end
+// Destinations start
+.destinations {
+	padding: 120px 0;
+	.tabs__item-active {
+	background-color: #3077C6;
+	color: #fff;
+	border-radius: 5px;
+	}
+	a {
+		text-decoration: none;
+		color: #000;
+		}
+
+	.tabs {
+		background-color: #F3F3F4;		
+		// text-align: center;
+		display: inline-block;
+		border-radius: 5px;
+		margin-top: 104px;
+
+		&__items {
+			display: flex;
+			list-style-type: none;
+		}
+
+		&__item {
+			// display: inline-block;
+			font-size: 24px;
+			padding: 15px 53px; 
+			font-weight: 400;
+
+			&:last-child {
+				padding: 15px 25px;
+			}
+			
+			&:hover {
+				cursor: pointer;
+				color: #fff;
+				border-radius: 5px;								
+				background-color: #3077C6 ;
+			}
+		}		
+	}
+	text-decoration: none;
+
+	.tabs__content {
+		display: none;
+
+		&-active {
+			display: flex;
+			justify-content: space-between;
+		}		
+	}
+	&-wrapper {
+		margin-top: 65px;
+
+		.item {
+			margin-right: 10px;
+			flex:0 1 25%;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&-img{
+				position: relative;
+				overflow: hidden;
+				// height: 295px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					display: block;
+					object-fit: cover;
+				}
+				
+				span {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					padding: 13px 24px;
+					background-color: #fff;
+					border-radius: 10px;
+					opacity: 0;
+					font-size: 18px;
+					color: $maincolor;
+					font-weight: 400;
+					border:1px solid $maincolor;
+				}				
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&:hover span {
+				opacity: 1;
+				transition: all 0.5s;
+			}
+
+			&:hover img {
+					filter: brightness(65%);
+					transition: all 0.5s;
+					transform: scale(1.1);
+				}	
+		}
+
+		.descr {
+			margin-top: 25px;
+			font-size: 24px;
+			color: $maincolor;
+			padding: 0 5px;
+		}
+			
+		// &:target {
+		// 	display: flex;
+		// }
+	}
+}
+// Destinations End
+
+// Reviews start
 .reviews {
 	padding: 120px 0;
 
@@ -342,7 +484,7 @@ h2 {
 
 			span {
 				display: block;
-				color:#3077C6;
+				color: $maincolor;
 				font-size: 18px;
 				line-height: 21px;
 			}
@@ -354,7 +496,7 @@ h2 {
 				&-box {
 					width: 48px;
 					height: 32px;
-					background-color: #10367C;
+					background-color: $bgc;
 					border-radius: 8px;
 					font-size: 18px;
 					color: #fff;
@@ -376,7 +518,7 @@ h2 {
 				&-reviews {
 					font-size: 14px;
 					line-height: 16px;	
-					color:#BFBFBF;
+					color: $sectext;
 				}
 
 			}
@@ -387,7 +529,7 @@ h2 {
 			flex-wrap: wrap;
 			
 			.author__avatar {
-				fill: #BFBFBF;
+				fill: $sectext;
 				width: 54px;
 				height: 54px;
 			}
@@ -401,7 +543,7 @@ h2 {
 				font-size: 18px;
 
 				&-nation {
-					color: #BFBFBF;
+					color: $sectext;
 				}
 			}
 			p {
@@ -412,11 +554,14 @@ h2 {
 	}
 }
 
+// Reviews end
+
+// Footer start
 footer {
   color: #fff;
   font-family: "Roboto";
   padding: 120px 0;
-  background: #10367c;
+  background: $bgc;
 
 	h4 {
 		display: none;
