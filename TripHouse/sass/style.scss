@@ -65,6 +65,32 @@ ul {
 		transition: all 0.2s ;
 	}
 }
+
+.slick-arrow {
+	font-size: 0;
+	width: 40px;
+	height: 40px;
+	border: none;
+	border-radius: 100%;
+	position: absolute;
+	background: url(../img/icons/arrowNext.svg) center  (center/auto) no-repeat;
+	background-color: #F3F3F4;
+	right: -10px;
+	top: 30%;
+	transition: ease-in 0.2s;
+	&:hover {
+		cursor: pointer;
+		background: url(../img/icons/arrowNextHover.svg) center  (center/auto) no-repeat;
+		background-color: lighten(#3077C6, 20%) ;
+		transition: ease-in 0.2s;
+	}
+}	
+
+.slick-prev {
+	display: none !important ;
+	}	
+
+
  // General style end 
 
 // Main start
@@ -103,6 +129,7 @@ ul {
 					line-height: 28px;
 					margin-right: 24px;
 					display: inline-block;
+					position: relative;
 
 					&:last-child {
 						margin-right: 48px;
@@ -271,38 +298,37 @@ ul {
 	padding: 120px 0;
 
 	&-wrapper {
-		position: relative;
-		display: flex;
-		justify-content: space-between;
 		margin-top: 104px;
 	}
+
 	&-item {
+		max-width: 98%;
+		max-height: 301px;
+
 		&__img {
-		max-height: 296px;
 		overflow: hidden;
-		}
+		position: relative;
+		padding: 0px 0px 100% 0px;
+
 		img {
 			width: 100%;
 			height: 100%;
-			display: block;
-			// object-fit: cover;
-		}
-
-		&:hover {
-			cursor: pointer;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			}
 		}
 
 		&__title {
 			color: $maincolor;	
 			font-size: 24px;
-			line-height: 28px;
 			margin-top: 24px;
 		}
 		
 		&__descr {
 			margin-top: 24px;
 			font-size: 24px;
-			line-height: 28px;
 			color: $sectext;
 			max-width: 300px;
 		}

@@ -14,3 +14,37 @@ $(function() {
   
 });
 })(jQuery);
+
+$(document).ready(function(){
+  $('.slick__wrapper').slick({
+		slidesToShow: 4 ,
+		slidesToScroll: 1,
+		infinite: true,
+		arrows: true,
+		 responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+       
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    }   
+  ]
+   
+  });
+});

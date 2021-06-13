@@ -2,6 +2,10 @@
 	h2 {
 		font-size: calc( (100vw - 360px)/(1264 - 360) * (40 - 28) + 28px);
 	}
+	.slick-arrow {
+		width: calc(28px + (40 - 28) * ((100vw - 360px  ) / (1264 - 360)));
+		height: calc(28px + (40 - 28) * ((100vw - 360px  ) / (1264 - 360)));
+	}
 	.main {
 		&-title {
 			font-size: calc( (100vw - 360px)/(1264 - 360) * (50 - 30) + 30px);
@@ -20,6 +24,23 @@
 			}
 		}
 	}
+	.favorite {
+		padding-top: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360))) ;
+		padding-bottom: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360))) ;
+		&-wrapper {
+			margin-top: calc(32px + (105 - 32) * ((100vw - 360px  ) / (1264 - 360))) ;
+		}
+		&-item {
+			&__title {
+				margin-top: calc(8px + (24 - 8) * ((100vw - 360px  ) / (1264 - 360))) ;
+				font-size: calc( (100vw - 360px)/(1264 - 360) * (24 - 12) + 12px);
+			}
+			&__descr {
+				font-size: calc( (100vw - 360px)/(1264 - 360) * (24 - 12) + 12px);
+				margin-top: calc(5px + (24 - 5) * ((100vw - 360px  ) / (1264 - 360))) ;
+			}
+		}
+	}
 	footer {
 		padding-top: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360))) ;
 		padding-bottom: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360))) ;
@@ -32,22 +53,39 @@
 }
 @media (max-width: 1199px) {	}
 @media (max-width: 991px) {
+	.slick-arrow {
+		top: 33%;
+	}
 	.advantages {
+
 		&-wrapper {
 			flex-wrap: wrap;
 			justify-content: center;
+
 			.advantages-item {
 				flex-basis: 35%;
 				margin-top: 30px ;
 			}
 		}
-
 	}
-	}
+}
 @media (max-width: 767px) {	
+
+	.slick-arrow {
+		top: 36%;
+	}
 	
 }
 @media	(max-width: 575px) {
+	.slick-arrow {
+		top: 34%;
+		background-size: 21%;
+
+		&:hover {
+			background-size: 21%;
+		}
+	}
+
 	.main {
 		&-title {
 			margin-top: 80px;
