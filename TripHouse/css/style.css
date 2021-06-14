@@ -88,6 +88,15 @@ ul {
   display: none !important;
 }
 
+input {
+  outline: none;
+  border: none;
+}
+
+a, button, input, label:hover {
+  cursor: pointer;
+}
+
 .main {
   padding: 50px 0px 120px;
   background: url(../img/main-bg.png) center center/cover no-repeat;
@@ -100,11 +109,14 @@ ul {
   align-items: center;
 }
 
+.main .header-logo {
+  font-size: 48px;
+}
+
 .main .header-logo a {
   font-family: 'Baloo 2', cursive;
   font-weight: 700;
   color: #3077C6;
-  font-size: 48px;
   letter-spacing: -1px;
 }
 
@@ -154,6 +166,10 @@ ul {
   margin-right: 24px;
 }
 
+.main .header-menu {
+  display: none;
+}
+
 .main-title {
   font-size: 50px;
   font-weight: 500;
@@ -164,27 +180,27 @@ ul {
   margin-bottom: 145px;
 }
 
-.main label {
-  position: absolute;
-  color: #fff;
-  top: -45px;
-  left: 15px;
-}
-
-.main label + label {
-  left: 40%;
-}
-
-.main label:hover {
-  cursor: pointer;
-}
-
 .main-form {
   background-color: #fff;
   border-radius: 8px;
   margin-top: 24px;
   display: flex;
   position: relative;
+}
+
+.main-form label {
+  position: absolute;
+  color: #fff;
+  top: -45px;
+  left: 15px;
+}
+
+.main-form label + label {
+  left: 40%;
+}
+
+.main-form label:hover {
+  cursor: pointer;
 }
 
 .main-form #city {
@@ -220,6 +236,116 @@ ul {
 
 .main-form .button:hover {
   cursor: pointer;
+}
+
+.main .mobile-form {
+  margin-top: 10px;
+  background-color: #f5bd41;
+  padding: 8px;
+  display: none;
+  flex-wrap: wrap;
+  max-width: 95%;
+  margin: 10px auto;
+  justify-content: space-between;
+}
+
+.main .mobile-form input {
+  width: 100%;
+  padding: 8px 8px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  height: 60px;
+  border-radius: 5px;
+}
+
+.main .mobile-form input::placeholder {
+  color: #383838;
+}
+
+.main .mobile-form__city {
+  flex: 0 1 100%;
+}
+
+.main .mobile-form__city input {
+  background: url(../img/icons/search.svg) 10px center/auto no-repeat;
+  background-color: #fff;
+  padding-left: 30px;
+}
+
+.main .mobile-form__date {
+  margin-top: 8px;
+  flex: 0 1 49%;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.main .mobile-form__date input {
+  padding: 18px 8px 0 8px;
+}
+
+.main .mobile-form__date label {
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  font-size: 14px;
+  display: block;
+}
+
+.main .mobile-form__choice {
+  margin-top: 8px;
+  background-color: #fff;
+  display: flex;
+  flex: 0 1 100%;
+  border-radius: 5px;
+}
+
+.main .mobile-form__choice-item {
+  position: relative;
+  flex: 0 1 33.3%;
+}
+
+.main .mobile-form__choice-item:after {
+  content: '';
+  height: 40px;
+  background-color: #BFBFBF;
+  width: 2px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.main .mobile-form__choice-item:last-child:after {
+  display: none;
+}
+
+.main .mobile-form__choice-item label {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+}
+
+.main .mobile-form__choice-item input {
+  padding: 18px 8px 0 8px;
+}
+
+.main .mobile-form__btn {
+  flex: 0 1 100%;
+}
+
+.main .mobile-form__btn .mobile-btn {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #3077C6;
+  color: #fff;
+  font-size: 19px;
+  margin-top: 8px;
 }
 
 .main-download {
@@ -462,7 +588,6 @@ ul {
 }
 
 .reviews-box__background {
-  height: 400px;
   position: relative;
   overflow: hidden;
 }
@@ -471,6 +596,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .reviews-box__background span {
@@ -624,6 +750,10 @@ footer .footer-wrapper .footer-links a:hover::after {
     width: calc(28px + (40 - 28) * ((100vw - 360px  ) / (1264 - 360)));
     height: calc(28px + (40 - 28) * ((100vw - 360px  ) / (1264 - 360)));
   }
+  .main {
+    padding-top: calc(12px + (50 - 12) * ((100vw - 360px  ) / (1264 - 360)));
+    padding-bottom: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360)));
+  }
   .main-title {
     font-size: calc( (100vw - 360px)/(1264 - 360) * (50 - 30) + 30px);
   }
@@ -677,6 +807,25 @@ footer .footer-wrapper .footer-links a:hover::after {
 }
 
 @media (max-width: 767px) {
+  .main .header-links a {
+    margin-right: 12px;
+  }
+  .main .header-links a:last-child {
+    margin-right: 12px;
+  }
+  .main h1 {
+    margin-bottom: 33px;
+    line-height: 35px;
+  }
+  .main-form {
+    display: none;
+  }
+  .main .mobile-form {
+    display: flex;
+  }
+  .main-download {
+    margin-top: 33px;
+  }
   .slick-arrow {
     top: 36%;
   }
@@ -690,26 +839,28 @@ footer .footer-wrapper .footer-links a:hover::after {
   .slick-arrow:hover {
     background-size: 21%;
   }
-  .main-title {
-    margin-top: 80px;
-  }
-  .main .header {
-    flex-direction: column;
+  .main .header-logo {
+    font-size: 35px;
   }
   .main .header-links {
-    margin: auto;
-  }
-  .main .header-links a:last-child {
-    margin-right: 0;
+    display: none;
   }
   .main .header-icons {
-    display: none;
+    margin-left: auto;
+    margin-right: 16px;
   }
-  .main label {
-    display: none;
+  .main .header-icons img {
+    height: 28px;
   }
-  .main form {
-    display: none;
+  .main .header-icons img:first-child {
+    margin-right: 12px;
+    height: 24px;
+  }
+  .main .header-menu {
+    display: block;
+  }
+  .main-title {
+    margin-top: 80px;
   }
   .advantages-title {
     line-height: 33px;

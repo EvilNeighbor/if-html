@@ -26,6 +26,9 @@
 					<img src="img/icons/Night.svg" alt="">
 					<img src="img/icons/account.svg" alt="">
 				</div>
+				<div class="header-menu">
+					<a href=""><img src="img/icons/menuHamb.svg" alt=""></a>
+				</div>
 			</header>
 			<h1 class="main-title">Discover stays <br>
 				to live, work or just relax</h1>
@@ -38,7 +41,37 @@
 				<input type="text" placeholder="2 Adults — 0 Children — 1 Room" id="choice">
 				<button class="button">Search</button>
 			</form>
-			<div class="main-download">
+			<form action="" class="mobile-form">
+				<div class="mobile-form__city">
+					<input type="text" placeholder="Your destination or hotel name">
+				</div>
+				<div class="mobile-form__date">
+					<label for="mobile-datein">Check-in date</label>
+					<input type="text" placeholder="Tue 15 Sept 2020" id="mobile-datein">
+				</div>
+				<div class="mobile-form__date">
+					<label for="mobile-dateout">Check-out date</label>
+					<input type="text" placeholder="Fr 15 Dec 2020" id="mobile-dateout">
+				</div>
+				<div class="mobile-form__choice">
+					<div class="mobile-form__choice-item">
+						<label for="adults">Adults</label>
+						<input type="number" placeholder="1" id="adults">
+					</div>
+					<div class="mobile-form__choice-item">
+						<label for="children">Children</label>
+						<input type="number" placeholder="1" id="children">
+					</div>
+					<div class="mobile-form__choice-item">
+						<label for="room">Rooms</label>
+						<input type="number" placeholder="1" id="room">
+					</div>
+				</div>
+				<div class="mobile-form__btn">
+					<button class="mobile-btn">Search</button>
+				</div>
+			</form>
+			<div class=" main-download">
 				<a href="">
 					<img src="img/playmarket.png" alt="playmarket">
 				</a>
@@ -311,6 +344,7 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="arrow  arrow__right">
 					<span class="icon-chevron-thin-right"></span>
 				</div>
@@ -354,8 +388,6 @@
 			<p>&#169; 2020 Triphouse, Inc. All rights reserved</p>
 		</div>
 	</footer>
-
-
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/datapicker.js"></script>
 	<script src="js/slick.js"></script>
