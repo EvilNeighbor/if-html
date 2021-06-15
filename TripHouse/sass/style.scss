@@ -1,7 +1,8 @@
 @import url(fonts.css);
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap');
+@import "variables";
 
-
+// General style start
 * {
   margin: 0;
   padding: 0;
@@ -9,16 +10,98 @@
 	font-family: "Roboto";
 }
 
+
 a {
-	text-decoration: none;
+	text-decoration: none; 
 }
 
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Roboto";
+  font-weight: 500;
+}
 
 .container {
   max-width: 1264px;
   margin: 0 auto;
   padding: 0 16px;
 }
+ul {
+	list-style: none;
+}
+
+.arrow {
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background:#F3F3F4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	font-size: 20px;
+	transition: all 0.2s ;
+
+	&__right {		
+		right: 0;
+		top: 148px;
+		transform: translate(41%, -50%);
+	}
+
+	&__left {
+		top: 148px;
+		transform: translateY(-50%);
+		left: -20px;
+	}		
+
+	&:hover {
+		background-color: $maincolor;
+		cursor: pointer;				
+	}
+
+	&:hover span {
+		color: #fff;
+		transition: all 0.2s ;
+	}
+}
+
+.slick-arrow {
+	font-size: 0;
+	width: 40px;
+	height: 40px;
+	border: none;
+	border-radius: 100%;
+	position: absolute;
+	background: url(../img/icons/arrowNext.svg) center  (center/auto) no-repeat;
+	background-color: #F3F3F4;
+	right: -10px;
+	top: 30%;
+	transition: ease-in 0.2s;
+	&:hover {
+		cursor: pointer;
+		background: url(../img/icons/arrowNextHover.svg) center  (center/auto) no-repeat;
+		background-color: lighten(#3077C6, 20%) ;
+		transition: ease-in 0.2s;
+	}
+}	
+
+.slick-prev {
+	display: none !important ;
+	}	
+
+input {
+	outline: none;
+	border: none;
+}
+a,button,input,label:hover {
+	cursor: pointer;
+}
+
+	
+// General style end 
+
+// Main start
 .main {
 	padding: 50px 0px 120px;
 	background: url(../img/main-bg.png) center  (center/cover) no-repeat;
@@ -30,12 +113,11 @@ a {
 		align-items: center;
 
 		&-logo {
-
+			font-size: 48px;	
 			a {
 				font-family: 'Baloo 2', cursive;
 				font-weight: 700;
-				color:#3077C6;
-				font-size: 48px;
+				color: $maincolor;				
 				letter-spacing: -1px ;
 
 					&:hover {
@@ -54,6 +136,7 @@ a {
 					line-height: 28px;
 					margin-right: 24px;
 					display: inline-block;
+					position: relative;
 
 					&:last-child {
 						margin-right: 48px;
@@ -62,9 +145,9 @@ a {
 					&:after {
 						content: "";
 						height: 3px;
-						background-color: #F5BD41;
+						background-color: $border;
 						display: block;
-						width: 95%;
+						width: 92%;
 						transform:  translateY(12px) scale(0) ;				
 						margin: 0 auto;	
 					}
@@ -83,6 +166,9 @@ a {
 				margin-right: 24px;
 			}
 		}
+		&-menu {
+			display: none;
+		}
 
 	}
 	&-title {
@@ -95,25 +181,28 @@ a {
 		margin-bottom: 145px;
 	}
 	
-	label {
-	position: absolute;
-	color: #fff;
-	top: -45px;
-	left: 15px;
-	&+label {
-		left: 40%;
-	}
 
-	&:hover {
-		cursor: pointer;
-	}
-}
 	&-form {
 		background-color: #fff;
 		border-radius: 8px;
 		margin-top: 24px;
 		display: flex;	
 		position: relative;
+
+			label {
+				position: absolute;
+				color: #fff;
+				top: -45px;
+				left: 15px;
+
+				&+label {
+					left: 40%;
+				}
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
 
 		#city {
 				// flex-basis: 40%;
@@ -123,7 +212,7 @@ a {
 
 		#date {
 				// flex-basis: 20%;
-				border:3px solid #F5BD41;
+				border:3px solid $border;
 				// flex: 1 1 20%;	
 				flex: 0 0 20%;
 			}
@@ -149,11 +238,111 @@ a {
 			// padding: 14px 57px;
 			// flex-basis: 20%;
 			border-radius: 8px;
-			background-color: #3077C6;
+			background-color: $maincolor;
 			color: #fff;
 			border:3px solid transparent;
 			&:hover {
 				cursor: pointer;
+			}
+		}
+	}
+	.mobile-form {
+		margin-top: 10px;
+		background-color: $border;
+		padding: 8px;
+		display: none;
+		flex-wrap: wrap;
+		max-width: 95%;
+		margin: 10px auto;
+		justify-content: space-between;
+		input {
+			width: 100%;
+			padding: 8px 8px;
+			font-size: 18px;
+			color: #000;
+			font-weight: 500;
+			height: 60px;
+			border-radius: 5px;
+			&::placeholder {
+				color: #383838;
+			}
+		}
+		&__city {
+			flex:0 1 100%;
+			input {
+				background: url(../img/icons/search.svg) 10px (center/auto) no-repeat;
+				background-color: #fff;
+				padding-left: 30px;
+			}
+		}
+		&__date {
+			margin-top: 8px;
+			flex:0 1 49%;
+			position: relative;
+			background-color: #fff;
+			border-radius: 5px;
+
+			input {
+				padding: 18px 8px 0 8px ;
+			}
+
+			label {
+				position: absolute;
+				left: 8px;
+				top: 6px;
+				font-size: 14px;
+				display: block;
+			}
+		}
+		&__choice {
+			margin-top: 8px;
+			background-color: #fff;
+			display: flex;
+			// width: 100%;
+			flex:0 1 100%;
+			border-radius: 5px;
+
+			&-item {
+				position: relative;
+				flex: 0 1 33.3%;
+
+				&:after {
+					content: '';
+					height: 40px;
+					background-color: $sectext;
+					width: 2px;
+					display: block;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 0;
+					}
+				&:last-child:after {
+					display: none;
+					}
+				label {
+					position: absolute;
+					top: 6px;
+					left: 8px;
+					}
+				input {
+					padding: 18px 8px 0 8px ;
+				}
+			}
+		}
+		&__btn {
+			flex: 0 1 100%;
+
+			.mobile-btn {
+				display: block;
+				width: 100%;
+				padding: 16px 0;
+				border-radius: 5px;
+				border: none;
+				background-color: $maincolor;
+				color: #fff;
+				font-size: 19px;
+				margin-top: 8px;
 			}
 		}
 	}
@@ -166,22 +355,18 @@ a {
 		}
 	}
 }
+// Main end
+
+// Advatages start
 .advantages {
 	padding: 120px 0;
   
 	&-icon {
 		text-align: center;
-		fill: #3077C6;
+		fill: $maincolor;
 		width: 100px;
 		height: 100px;
 	}
-}
-
-h2 {
-  text-align: center;
-  font-size: 40px;
-  font-family: "Roboto";
-  font-weight: 500;
 }
 
 .advantages-title:after {
@@ -191,7 +376,7 @@ h2 {
   width: 100px;
   margin: 0 auto;
   margin-top: 20px;
-  background: #f5bd41;
+  background: $border;
 }
 
 .advantages-wrapper {
@@ -218,78 +403,171 @@ h2 {
   text-align: center;
   margin-top: 45px;
 }
+// Advantages end
 
-.arrow {
-	width: 40px;
-	height: 40px;
-	border-radius: 100%;
-	background:#F3F3F4;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	font-size: 20px;
-	transition: all 0.2s ;
-
-	&__right {		
-		right: 0;
-		top: 148px;
-		transform: translate(41%, -50%);
-	}
-	&__left {
-		top: 148px;
-		transform: translateY(-50%);
-		left: -20px;
-	}		
-	&:hover {
-		background-color: #3077C6;
-		cursor: pointer;
-		
-	}
-	&:hover span {
-		color: #fff;
-		transition: all 0.2s ;
-		}
-}
-
+// Favorite start
 .favorite {
 	background-color: #EAF0F9;
 	padding: 120px 0;
 
 	&-wrapper {
-		position: relative;
-		display: flex;
-		justify-content: space-between;
 		margin-top: 104px;
 	}
+
 	&-item {
+		max-width: 98%;
+		max-height: 301px;
+
+		&__img {
+		overflow: hidden;
+		position: relative;
+		padding: 0px 0px 100% 0px;
+
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-		}
-
-		&:hover {
-			cursor: pointer;
+			position: absolute;
+			top: 0;
+			left: 0;
+			}
 		}
 
 		&__title {
-			color: #3077C6;	
+			color: $maincolor;	
 			font-size: 24px;
-			line-height: 28px;
 			margin-top: 24px;
 		}
 		
 		&__descr {
 			margin-top: 24px;
 			font-size: 24px;
-			line-height: 28px;
-			color: #BFBFBF;
+			color: $sectext;
 			max-width: 300px;
 		}
 	}
-
 }
+// Favorite end
+// Destinations start
+.destinations {
+	padding: 120px 0;
+	.tabs__item-active {
+	background-color: #3077C6;
+	color: #fff;
+	border-radius: 5px;
+	}
+	a {
+		text-decoration: none;
+		color: #000;
+		}
+
+	.tabs {
+		background-color: #F3F3F4;		
+		// text-align: center;
+		display: inline-block;
+		border-radius: 5px;
+		margin-top: 104px;
+
+		&__items {
+			display: flex;
+			list-style-type: none;
+		}
+
+		&__item {
+			// display: inline-block;
+			font-size: 24px;
+			padding: 15px 53px; 
+			font-weight: 400;
+
+			&:last-child {
+				padding: 15px 25px;
+			}
+			
+			&:hover {
+				cursor: pointer;
+				color: #fff;
+				border-radius: 5px;								
+				background-color: #3077C6 ;
+			}
+		}		
+	}
+	text-decoration: none;
+
+	.tabs__content {
+		display: none;
+
+		&-active {
+			display: flex;
+			justify-content: space-between;
+		}		
+	}
+	&-wrapper {
+		margin-top: 65px;
+
+		.item {
+			margin-right: 10px;
+			flex:0 1 25%;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&-img{
+				position: relative;
+				overflow: hidden;
+				// height: 295px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					display: block;
+					object-fit: cover;
+				}
+				
+				span {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					padding: 13px 24px;
+					background-color: #fff;
+					border-radius: 10px;
+					opacity: 0;
+					font-size: 18px;
+					color: $maincolor;
+					font-weight: 400;
+					border:1px solid $maincolor;
+				}				
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&:hover span {
+				opacity: 1;
+				transition: all 0.5s;
+			}
+
+			&:hover img {
+					filter: brightness(65%);
+					transition: all 0.5s;
+					transform: scale(1.1);
+				}	
+		}
+
+		.descr {
+			margin-top: 25px;
+			font-size: 24px;
+			color: $maincolor;
+			padding: 0 5px;
+		}
+			
+	}
+}
+// Destinations End
+
+// Reviews start
 .reviews {
 	padding: 120px 0;
 
@@ -312,18 +590,18 @@ h2 {
 		}
 	}
 
-	&-box {		
+	&-box {	
 		background-color: #EAF0F9;
 		max-width: 400px;
 
 		&__background {
-			height: 400px;
 			position: relative;
 			overflow: hidden;
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				display: block;
 			}
 
 			span  {
@@ -342,7 +620,7 @@ h2 {
 
 			span {
 				display: block;
-				color:#3077C6;
+				color: $maincolor;
 				font-size: 18px;
 				line-height: 21px;
 			}
@@ -354,7 +632,7 @@ h2 {
 				&-box {
 					width: 48px;
 					height: 32px;
-					background-color: #10367C;
+					background-color: $bgc;
 					border-radius: 8px;
 					font-size: 18px;
 					color: #fff;
@@ -376,7 +654,7 @@ h2 {
 				&-reviews {
 					font-size: 14px;
 					line-height: 16px;	
-					color:#BFBFBF;
+					color: $sectext;
 				}
 
 			}
@@ -387,7 +665,7 @@ h2 {
 			flex-wrap: wrap;
 			
 			.author__avatar {
-				fill: #BFBFBF;
+				fill: $sectext;
 				width: 54px;
 				height: 54px;
 			}
@@ -401,7 +679,7 @@ h2 {
 				font-size: 18px;
 
 				&-nation {
-					color: #BFBFBF;
+					color: $sectext;
 				}
 			}
 			p {
@@ -412,11 +690,14 @@ h2 {
 	}
 }
 
+// Reviews end
+
+// Footer start
 footer {
   color: #fff;
   font-family: "Roboto";
   padding: 120px 0;
-  background: #10367c;
+  background: $bgc;
 
 	h4 {
 		display: none;
