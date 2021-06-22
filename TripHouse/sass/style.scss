@@ -97,6 +97,9 @@ input {
 a,button,input,label:hover {
 	cursor: pointer;
 }
+button {
+	border: none;
+}
 
 	
 // General style end 
@@ -452,7 +455,7 @@ a,button,input,label:hover {
 .destinations {
 	padding: 120px 0;
 	.tabs__item-active {
-	background-color: #3077C6;
+	background-color: #3077C6 !important;
 	color: #fff;
 	border-radius: 5px;
 	}
@@ -462,15 +465,13 @@ a,button,input,label:hover {
 		}
 
 	.tabs {
-		background-color: #F3F3F4;		
-		// text-align: center;
-		display: inline-block;
+		
 		border-radius: 5px;
 		margin-top: 104px;
 
 		&__items {
 			display: flex;
-			list-style-type: none;
+			list-style-type: none;				
 		}
 
 		&__item {
@@ -478,10 +479,7 @@ a,button,input,label:hover {
 			font-size: 24px;
 			padding: 15px 53px; 
 			font-weight: 400;
-
-			&:last-child {
-				padding: 15px 25px;
-			}
+			background-color: #F3F3F4;	
 			
 			&:hover {
 				cursor: pointer;
@@ -499,18 +497,15 @@ a,button,input,label:hover {
 		&-active {
 			display: flex;
 			justify-content: space-between;
+			flex-wrap: wrap;
 		}		
 	}
 	&-wrapper {
 		margin-top: 65px;
 
 		.item {
-			margin-right: 10px;
-			flex:0 1 25%;
+			flex:0 1 24.5%;
 
-			&:last-child {
-				margin-right: 0;
-			}
 
 			&-img{
 				position: relative;
@@ -576,6 +571,7 @@ a,button,input,label:hover {
 		justify-content: space-between;	
 		margin-top: 105px;
 		position: relative;
+		min-height: 0;
 
 		.arrow {	
 
@@ -592,16 +588,22 @@ a,button,input,label:hover {
 
 	&-box {	
 		background-color: #EAF0F9;
-		max-width: 400px;
+		max-width: 98%;
+		height: 750px;
+		padding-bottom: 24px;	
 
 		&__background {
 			position: relative;
 			overflow: hidden;
+			padding: 0 0 100% 0;
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
 			}
 
 			span  {
@@ -680,18 +682,148 @@ a,button,input,label:hover {
 
 				&-nation {
 					color: $sectext;
+					display: flex;
+					img {
+						margin-right: 10px;
+					}
 				}
 			}
 			p {
 				font-size: 18px;
 				margin-top: 15px;
+				display: -webkit-box;
+				-webkit-line-clamp: 6;
+				-webkit-box-orient: vertical;  
+				overflow: hidden;
 			}
 		}
 	}
+
+	.slick-wrapper {
+		.slick-arrow {
+			top: 201px;
+			transform: translateY(-50%)
+		}
+		.slick-dots {
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+
+			li {
+				margin-right: 10px;
+				border-radius: 100% !important;
+				list-style: none;
+
+				button {
+					font-size: 0;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					border: 1px solid black;
+					background-color: #fff;
+				}			
+			}
+				.slick-active button {					
+					background-color: #000 !important;	
+				}
+		}			
+	}
+
 }
 
 // Reviews end
+	// Mobile-app
+	.mobile-app {
+		padding: 24px 17px;
+		display: none;
 
+		&__wrapper {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		&__close {
+			img {
+				width: 16px;
+				height: 16px;
+				margin-right: 16px;
+			}
+		}
+
+
+		&__img {
+			width: 58px;
+			height: 58px;
+			background-color: $maincolor;
+			border-radius: 5px;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: 'Baloo 2', cursive;
+			font-weight: 700;
+			font-size: 12px;
+			margin-right: 16px;
+		}
+
+		&__descr {
+			font-size: 12px;
+			margin-right: 16px;
+		}
+
+		&__link {
+			a{
+				color: $maincolor;
+				font-size: 14px;
+				font-weight: 500;
+			}
+		}
+	}
+
+// Sign-up
+.sign-up {
+
+	.wrapper {
+		position: relative;
+		padding: 50px 0 50px 25px;
+		background-color: #EAF0F9;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+	}
+
+	&__login {
+		height: 86px;
+		width: 86px;
+		border-radius: 100%;
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__descr {
+		margin-left: 24px;
+		font-size: 28px;
+		font-weight: 500;
+		button {
+			padding: 12px 32px;
+			border: 1px solid $maincolor;
+			color: $maincolor;
+			background-color: #fff;
+			border-radius: 10px;
+			margin-top: 21px;
+		}
+	}
+	.close {
+		position: absolute;
+		right: 24px;
+		top: 24px;
+	}
+}
 // Footer start
 footer {
   color: #fff;

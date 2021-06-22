@@ -97,6 +97,10 @@ a, button, input, label:hover {
   cursor: pointer;
 }
 
+button {
+  border: none;
+}
+
 .main {
   padding: 50px 0px 120px;
   background: url(../img/main-bg.png) center center/cover no-repeat;
@@ -452,7 +456,7 @@ a, button, input, label:hover {
 }
 
 .destinations .tabs__item-active {
-  background-color: #3077C6;
+  background-color: #3077C6 !important;
   color: #fff;
   border-radius: 5px;
 }
@@ -463,8 +467,6 @@ a, button, input, label:hover {
 }
 
 .destinations .tabs {
-  background-color: #F3F3F4;
-  display: inline-block;
   border-radius: 5px;
   margin-top: 104px;
 }
@@ -478,10 +480,7 @@ a, button, input, label:hover {
   font-size: 24px;
   padding: 15px 53px;
   font-weight: 400;
-}
-
-.destinations .tabs__item:last-child {
-  padding: 15px 25px;
+  background-color: #F3F3F4;
 }
 
 .destinations .tabs__item:hover {
@@ -498,6 +497,7 @@ a, button, input, label:hover {
 .destinations .tabs__content-active {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .destinations-wrapper {
@@ -505,12 +505,7 @@ a, button, input, label:hover {
 }
 
 .destinations-wrapper .item {
-  margin-right: 10px;
-  flex: 0 1 25%;
-}
-
-.destinations-wrapper .item:last-child {
-  margin-right: 0;
+  flex: 0 1 24.5%;
 }
 
 .destinations-wrapper .item-img {
@@ -571,6 +566,7 @@ a, button, input, label:hover {
   justify-content: space-between;
   margin-top: 105px;
   position: relative;
+  min-height: 0;
 }
 
 .reviews-wrapper .arrow__right {
@@ -584,12 +580,15 @@ a, button, input, label:hover {
 
 .reviews-box {
   background-color: #EAF0F9;
-  max-width: 400px;
+  max-width: 98%;
+  height: 750px;
+  padding-bottom: 24px;
 }
 
 .reviews-box__background {
   position: relative;
   overflow: hidden;
+  padding: 0 0 100% 0;
 }
 
 .reviews-box__background img {
@@ -597,6 +596,9 @@ a, button, input, label:hover {
   height: 100%;
   object-fit: cover;
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .reviews-box__background span {
@@ -675,11 +677,135 @@ a, button, input, label:hover {
 
 .reviews-box__comment .author-nation {
   color: #BFBFBF;
+  display: flex;
+}
+
+.reviews-box__comment .author-nation img {
+  margin-right: 10px;
 }
 
 .reviews-box__comment p {
   font-size: 18px;
   margin-top: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.reviews .slick-wrapper .slick-arrow {
+  top: 201px;
+  transform: translateY(-50%);
+}
+
+.reviews .slick-wrapper .slick-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.reviews .slick-wrapper .slick-dots li {
+  margin-right: 10px;
+  border-radius: 100% !important;
+  list-style: none;
+}
+
+.reviews .slick-wrapper .slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.reviews .slick-wrapper .slick-dots .slick-active button {
+  background-color: #000 !important;
+}
+
+.mobile-app {
+  padding: 24px 17px;
+  display: none;
+}
+
+.mobile-app__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile-app__close img {
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+}
+
+.mobile-app__img {
+  width: 58px;
+  height: 58px;
+  background-color: #3077C6;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 700;
+  font-size: 12px;
+  margin-right: 16px;
+}
+
+.mobile-app__descr {
+  font-size: 12px;
+  margin-right: 16px;
+}
+
+.mobile-app__link a {
+  color: #3077C6;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sign-up .wrapper {
+  position: relative;
+  padding: 50px 0 50px 25px;
+  background-color: #EAF0F9;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.sign-up__login {
+  height: 86px;
+  width: 86px;
+  border-radius: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up__descr {
+  margin-left: 24px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.sign-up__descr button {
+  padding: 12px 32px;
+  border: 1px solid #3077C6;
+  color: #3077C6;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 21px;
+}
+
+.sign-up .close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
 }
 
 footer {
@@ -783,6 +909,23 @@ footer .footer-wrapper .footer-links a:hover::after {
     font-size: calc( (100vw - 360px)/(1264 - 360) * (24 - 12) + 12px);
     margin-top: calc(5px + (24 - 5) * ((100vw - 360px  ) / (1264 - 360)));
   }
+  .destinations .tabs__item {
+    font-size: calc( (100vw - 360px)/(1264 - 360) * (24 - 18) + 18px);
+    padding-top: calc(5px + (15 - 5) * ((100vw - 360px  ) / (1264 - 360)));
+    padding-bottom: calc(5px + (15 - 5) * ((100vw - 360px  ) / (1264 - 360)));
+    padding-right: calc(21px + (53 - 21) * ((100vw - 360px  ) / (1264 - 360)));
+    padding-left: calc(21px + (53 - 21) * ((100vw - 360px  ) / (1264 - 360)));
+  }
+  .destinations-wrapper .descr {
+    font-size: calc( (100vw - 360px)/(1264 - 360) * (24 - 12) + 12px);
+  }
+  .destinations-wrapper .item span {
+    font-size: calc( (100vw - 360px)/(1264 - 360) * (18 - 12) + 12px);
+  }
+  .reviews {
+    padding-top: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360)));
+    padding-bottom: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360)));
+  }
   footer {
     padding-top: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360)));
     padding-bottom: calc(40px + (120 - 40) * ((100vw - 360px  ) / (1264 - 360)));
@@ -803,6 +946,9 @@ footer .footer-wrapper .footer-links a:hover::after {
   .advantages-wrapper .advantages-item {
     flex-basis: 35%;
     margin-top: 30px;
+  }
+  .destinations-wrapper .item span {
+    padding: 13px 10px;
   }
 }
 
@@ -825,6 +971,24 @@ footer .footer-wrapper .footer-links a:hover::after {
   }
   .main-download {
     margin-top: 33px;
+  }
+  .destinations .tabs {
+    margin-top: 32px;
+  }
+  .destinations-wrapper {
+    margin-top: 25px;
+  }
+  .destinations-wrapper .item {
+    flex: 0 1 49.5%;
+    margin-top: 10px;
+    transition: all 0.3s;
+  }
+  .destinations-wrapper .item:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.69);
+  }
+  .destinations-wrapper .descr {
+    margin-top: 10px;
+    padding-bottom: 5px;
   }
   .slick-arrow {
     top: 36%;
@@ -888,6 +1052,66 @@ footer .footer-wrapper .footer-links a:hover::after {
   .advantages-icon {
     width: 70px;
     height: 70px;
+  }
+  .destinations .tabs {
+    margin-top: 32px;
+  }
+  .destinations .tabs__items {
+    justify-content: space-between;
+  }
+  .sign-up {
+    display: none;
+  }
+  .reviews {
+    background-color: #EAF0F9;
+  }
+  .reviews .wrapper {
+    padding: 0;
+  }
+  .reviews-wrapper {
+    margin-top: 32px;
+  }
+  .reviews-box {
+    height: calc(540px + (630 - 540) * ((100vw - 360px  ) / (575 - 360)));
+    max-width: 100%;
+    padding: 0 14px;
+  }
+  .reviews-box__background {
+    padding: 0 0 71% 0;
+  }
+  .reviews-box__background img {
+    max-height: 400px;
+  }
+  .reviews-box__background span {
+    display: none;
+  }
+  .reviews-box__rating {
+    margin-top: 14px;
+  }
+  .reviews-box__rating span {
+    font-size: 15px !important;
+  }
+  .reviews-box__rating .locate {
+    align-items: center;
+  }
+  .reviews-box__rating .locate-box {
+    width: 40px;
+    height: 26px;
+  }
+  .reviews-box__rating .rating {
+    margin-top: 3px;
+  }
+  .reviews-box__comment {
+    margin-top: 14px;
+  }
+  .reviews-box__comment span {
+    font-size: 15px;
+  }
+  .reviews-box__comment p {
+    font-size: 15px;
+  }
+  .mobile-app {
+    display: block;
   }
   footer .container {
     max-width: 225px;
