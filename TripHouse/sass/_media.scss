@@ -192,6 +192,10 @@
 }
 
 @media	(max-width: 575px) {
+	.main {
+		min-height: unset;
+		
+	}
 	.slick-arrow {
 		top: 34%;
 		background-size: 21%;
