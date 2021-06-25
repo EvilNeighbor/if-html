@@ -993,6 +993,21 @@ footer .footer-wrapper .footer-links a:hover::after {
   .slick-arrow {
     top: 36%;
   }
+  .sign-up .wrapper {
+    padding: 25px 0 25px 25px;
+  }
+  .sign-up__login {
+    width: 70px;
+    height: 70px;
+  }
+  .sign-up__login img {
+    width: 40px;
+    height: 40px;
+  }
+  .sign-up__descr {
+    font-size: 20px;
+    width: calc(330px + (480 - 330) * ((100vw - 575px  ) / (767 - 575)));
+  }
 }
 
 @media (max-width: 575px) {
