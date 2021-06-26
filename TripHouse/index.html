@@ -32,43 +32,39 @@
 			</header>
 			<h1 class="main-title">Discover stays <br>
 				to live, work or just relax</h1>
-			<form action="/" class="main-form">
-				<label for="city">Your destination or hotel name</label>
-				<label for="date">Check-in — Check-out</label>
-				<input type="search" id="city" placeholder="New York">
-				<input type="text" id="date" placeholder="Tue 15 Sept — Sat 19 Sept" data-range="true"
-					data-multiple-dates-separator=" - " class="datepicker-here">
-				<input type="text" placeholder="2 Adults — 0 Children — 1 Room" id="choice">
-				<button class="button">Search</button>
-			</form>
-			<form action="" class="mobile-form">
-				<div class="mobile-form__city">
-					<input type="text" placeholder="Your destination or hotel name">
+			<form action="">
+				<div class="search-block search">
+					<p>
+						<input type="text" class="search-block__input" id="city" placeholder=" ">
+						<label for="city" class="search-block__label">Your destination or hotel name</label>
+					</p>
 				</div>
-				<div class="mobile-form__date">
-					<label for="mobile-datein">Check-in date</label>
-					<input type="text" placeholder="Tue 15 Sept 2020" id="mobile-datein">
+				<div class="search-block date">
+					<p>
+						<input type="text" class="search-block__input" id="check-in" placeholder=" ">
+						<label for="check-in" class="search-block__label">Check-in date</label>
+					</p>
+					<p>
+						<input type="text" class="search-block__input" id="check-out" placeholder=" ">
+						<label for="check-out" class="search-block__label">Check-out date</label>
+					</p>
 				</div>
-				<div class="mobile-form__date">
-					<label for="mobile-dateout">Check-out date</label>
-					<input type="text" placeholder="Fr 15 Dec 2020" id="mobile-dateout">
+				<div class="search-block people">
+					<p>
+						<input type="text" class="search-block__input" id="adults" placeholder=" ">
+						<label for="adults" class="search-block__label">Adults</label>
+					</p>
+					<p>
+						<input type="text" class="search-block__input" id="children" placeholder=" ">
+						<label for="children" class="search-block__label">Children</label>
+					</p>
+					<p>
+						<input type="text" class="search-block__input" id="rooms" placeholder=" ">
+						<label for="rooms" class="search-block__label">Room</label>
+					</p>
 				</div>
-				<div class="mobile-form__choice">
-					<div class="mobile-form__choice-item">
-						<label for="adults">Adults</label>
-						<input type="number" placeholder="1" id="adults">
-					</div>
-					<div class="mobile-form__choice-item">
-						<label for="children">Children</label>
-						<input type="number" placeholder="1" id="children">
-					</div>
-					<div class="mobile-form__choice-item">
-						<label for="room">Rooms</label>
-						<input type="number" placeholder="1" id="room">
-					</div>
-				</div>
-				<div class="mobile-form__btn">
-					<button class="mobile-btn">Search</button>
+				<div class="search-block button">
+					<button>Search</button>
 				</div>
 			</form>
 			<div class=" main-download">
