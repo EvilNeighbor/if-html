@@ -184,7 +184,7 @@ button {
     margin-bottom: 145px;
   }
 
-  form {
+  .main-form {
     display: flex;
     height: 64px;
     align-items: center;
@@ -503,6 +503,10 @@ button {
 // Destinations start
 .destinations {
   padding: 120px 0;
+  @media (max-width: 1264px) {
+    padding-top: calc(40px + (120 - 40) * ((100vw - 360px) / (1264 - 360)));
+    padding-bottom: calc(40px + (120 - 40) * ((100vw - 360px) / (1264 - 360)));
+  }
   .tabs__item-active {
     background-color: #3077c6 !important;
     color: #fff;
@@ -516,6 +520,9 @@ button {
   .tabs {
     border-radius: 5px;
     margin-top: 104px;
+    @media (max-width: 1264px) {
+      margin-top: calc(32px + (104 - 32) * ((100vw - 360px) / (1264 - 360)));
+    }
 
     &__items {
       display: flex;
@@ -607,7 +614,6 @@ button {
   }
 }
 // Destinations End
-
 // Reviews start
 .reviews {
   padding: 120px 0;

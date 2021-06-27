@@ -214,7 +214,7 @@ button {
   margin-bottom: 145px;
 }
 
-.main form {
+.main .main-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,13 +230,13 @@ button {
 }
 
 @media (min-width: 991px) and (max-width: 1264px) {
-  .main form {
+  .main .main-form {
     height: calc(56px + (68 - 56) * ((100vw - 991px) / (1264 - 991)));
   }
 }
 
 @media (max-width: 991px) {
-  .main form {
+  .main .main-form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -248,7 +248,7 @@ button {
   }
 }
 
-.main form .search-block {
+.main .main-form .search-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,19 +256,19 @@ button {
 }
 
 @media (max-width: 991px) {
-  .main form .search-block {
+  .main .main-form .search-block {
     margin-top: 8px;
   }
-  .main form .search-block:first-child {
+  .main .main-form .search-block:first-child {
     margin-top: 0;
   }
 }
 
-.main form .search-block p {
+.main .main-form .search-block p {
   position: relative;
 }
 
-.main form .search-block input {
+.main .main-form .search-block input {
   padding-left: 25px;
   border-radius: 8px;
   width: 100%;
@@ -279,13 +279,13 @@ button {
 }
 
 @media (max-width: 991px) {
-  .main form .search-block input {
+  .main .main-form .search-block input {
     height: 48px;
     font-size: 15px;
   }
 }
 
-.main form .search-block label {
+.main .main-form .search-block label {
   position: absolute;
   left: 25px;
   top: 50%;
@@ -297,33 +297,33 @@ button {
 }
 
 @media (min-width: 991px) and (max-width: 1264px) {
-  .main form .search-block label {
+  .main .main-form .search-block label {
     font-size: calc(14px + (18 - 14) * ((100vw - 991px) / (1264 - 991)));
   }
 }
 
 @media (max-width: 991px) {
-  .main form .search-block label {
+  .main .main-form .search-block label {
     left: 36px;
   }
 }
 
 @media (max-width: 575px) {
-  .main form .search-block label {
+  .main .main-form .search-block label {
     font-size: 15px;
   }
 }
 
-.main form .search-block input:not(:placeholder-shown) + label,
-.main form .search-block input:focus + label {
+.main .main-form .search-block input:not(:placeholder-shown) + label,
+.main .main-form .search-block input:focus + label {
   -webkit-transform: translateY(calc(-50% - 50px));
           transform: translateY(calc(-50% - 50px));
   color: #fff;
 }
 
 @media (max-width: 991px) {
-  .main form .search-block input:not(:placeholder-shown) + label,
-  .main form .search-block input:focus + label {
+  .main .main-form .search-block input:not(:placeholder-shown) + label,
+  .main .main-form .search-block input:focus + label {
     font-size: 12px;
     -webkit-transform: translateY(-24px);
             transform: translateY(-24px);
@@ -331,26 +331,26 @@ button {
   }
 }
 
-.main form .date input,
-.main form .people input {
+.main .main-form .date input,
+.main .main-form .people input {
   padding-left: 10px;
 }
 
-.main form .date label,
-.main form .people label {
+.main .main-form .date label,
+.main .main-form .people label {
   left: 10px;
 }
 
-.main form .search {
+.main .main-form .search {
   width: 40%;
 }
 
 @media (max-width: 991px) {
-  .main form .search {
+  .main .main-form .search {
     width: 100%;
     border-radius: 4px;
   }
-  .main form .search p::before {
+  .main .main-form .search p::before {
     content: "";
     position: absolute;
     top: 0;
@@ -363,24 +363,24 @@ button {
     z-index: 999;
     background: url(../img/icons/search.svg) center center/cover no-repeat;
   }
-  .main form .search input {
+  .main .main-form .search input {
     padding-left: 36px;
     border-radius: 4px;
   }
 }
 
-.main form .search p {
+.main .main-form .search p {
   width: 100%;
 }
 
-.main form .date {
+.main .main-form .date {
   border: 3px solid #f5bd41;
   border-radius: 8px;
   width: 25%;
 }
 
 @media (max-width: 991px) {
-  .main form .date {
+  .main .main-form .date {
     width: 100% !important;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -388,31 +388,31 @@ button {
     border: unset;
     border-radius: 4px;
   }
-  .main form .date input {
+  .main .main-form .date input {
     border-radius: 4px;
   }
 }
 
 @media (max-width: 991px) {
-  .main form .date p {
+  .main .main-form .date p {
     width: 49.3%;
   }
 }
 
-.main form .people {
+.main .main-form .people {
   width: 23%;
 }
 
 @media (max-width: 991px) {
-  .main form .people {
+  .main .main-form .people {
     width: 100%;
     background-color: #fff;
     border-radius: 4px;
   }
-  .main form .people p {
+  .main .main-form .people p {
     width: 33.3%;
   }
-  .main form .people p::after {
+  .main .main-form .people p::after {
     content: "";
     display: block;
     position: absolute;
@@ -424,24 +424,24 @@ button {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
-  .main form .people p:last-child::after {
+  .main .main-form .people p:last-child::after {
     display: none;
   }
 }
 
-.main form .button {
+.main .main-form .button {
   width: 13%;
 }
 
 @media (max-width: 991px) {
-  .main form .button {
+  .main .main-form .button {
     width: 100%;
     height: 48px;
     border-radius: 4px;
   }
 }
 
-.main form button {
+.main .main-form button {
   display: block;
   width: 100%;
   border-radius: 8px;
@@ -454,19 +454,19 @@ button {
   transition: all 0.2s;
 }
 
-.main form button:hover {
+.main .main-form button:hover {
   -webkit-box-shadow: 0px 0px 14px 2px rgba(255, 255, 255, 0.25);
           box-shadow: 0px 0px 14px 2px rgba(255, 255, 255, 0.25);
 }
 
 @media (min-width: 991px) and (max-width: 1264px) {
-  .main form button {
+  .main .main-form button {
     font-size: calc(18px + (24 - 18) * ((100vw - 991px) / (1264 - 991)));
   }
 }
 
 @media (max-width: 991px) {
-  .main form button {
+  .main .main-form button {
     border-radius: 4px;
   }
 }
@@ -584,6 +584,13 @@ button {
   text-decoration: none;
 }
 
+@media (max-width: 1264px) {
+  .destinations {
+    padding-top: calc(40px + (120 - 40) * ((100vw - 360px) / (1264 - 360)));
+    padding-bottom: calc(40px + (120 - 40) * ((100vw - 360px) / (1264 - 360)));
+  }
+}
+
 .destinations .tabs__item-active {
   background-color: #3077c6 !important;
   color: #fff;
@@ -598,6 +605,12 @@ button {
 .destinations .tabs {
   border-radius: 5px;
   margin-top: 104px;
+}
+
+@media (max-width: 1264px) {
+  .destinations .tabs {
+    margin-top: calc(32px + (104 - 32) * ((100vw - 360px) / (1264 - 360)));
+  }
 }
 
 .destinations .tabs__items {
