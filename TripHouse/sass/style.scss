@@ -751,6 +751,12 @@ button {
     .slick-arrow {
       top: 201px;
       transform: translateY(-50%);
+      @media (min-width: 991px) and (max-width: 1264px) {
+        top: calc(150px + (201 - 150) * ((100vw - 991px) / (1264 - 991)));
+      }
+      @media (min-width: 575px) and (max-width: 990px) {
+        top: calc(129px + (230 - 129) * ((100vw - 575px) / (990 - 575)));
+      }
     }
     .slick-dots {
       position: absolute;
