@@ -116,9 +116,8 @@
   .main {
     .header {
       &-links {
-        a {
-          margin-right: 12px;
-          &:last-child {
+        &__items {
+          li {
             margin-right: 12px;
           }
         }
@@ -197,7 +196,15 @@
         font-size: 35px;
       }
       &-links {
-        display: none;
+        &__items {
+          margin-right: 20px;
+          li {
+            &:nth-child(1),
+            &:nth-child(2) {
+              display: none;
+            }
+          }
+        }
       }
       &-icons {
         margin-left: auto;

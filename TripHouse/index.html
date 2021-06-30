@@ -19,15 +19,28 @@
 					<a href="#">TripHouse</a>
 				</div>
 				<div class="header-links">
-					<a href="#">Stays</a>
-					<a href="#">Attractions</a>
-				</div>
-				<div class="header-icons">
-					<img src="img/icons/Night.svg" alt="">
-					<img src="img/icons/account.svg" alt="">
-				</div>
-				<div class="header-menu">
-					<a href=""><img src="img/icons/menuHamb.svg" alt=""></a>
+					<ul class="header-links__items">
+						<li><a href="#" class="header-links__item">Stays</a></li>
+						<li><a href="#" class="header-links__item">Attractions</a></li>
+						<li><a href="#"><svg class="night">
+									<use xlink:href="sprite.svg#night"></use>
+								</svg></a></li>
+						<li><a href="#"><svg class="account">
+									<use xlink:href="sprite.svg#account"></use>
+								</svg></a></li>
+						<!-- <li><a href="#"><img src="img/icons/menuHamb.svg" alt=""></a></li> -->
+					</ul>
+					<div class="hamburger-menu">
+						<input id="menu__toggle" type="checkbox" />
+						<label class="menu__btn" for="menu__toggle">
+							<span></span>
+						</label>
+						<ul class="menu__box">
+							<li><a class="menu__item" href="#">Stays</a></li>
+							<li><a class="menu__item" href="#">Attractions</a></li>
+						</ul>
+					</div>
+
 				</div>
 			</header>
 			<h1 class="main-title">Discover stays <br>
