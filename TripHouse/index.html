@@ -19,56 +19,65 @@
 					<a href="#">TripHouse</a>
 				</div>
 				<div class="header-links">
-					<a href="#">Stays</a>
-					<a href="#">Attractions</a>
-				</div>
-				<div class="header-icons">
-					<img src="img/icons/Night.svg" alt="">
-					<img src="img/icons/account.svg" alt="">
-				</div>
-				<div class="header-menu">
-					<a href=""><img src="img/icons/menuHamb.svg" alt=""></a>
+					<ul class="header-links__items">
+						<li><a href="#" class="header-links__item">Stays</a></li>
+						<li><a href="#" class="header-links__item">Attractions</a></li>
+						<li><a href="#"><svg class="night">
+									<use xlink:href="sprite.svg#night"></use>
+								</svg></a></li>
+						<li><a href="#"><svg class="account">
+									<use xlink:href="sprite.svg#account"></use>
+								</svg></a></li>
+						<!-- <li><a href="#"><img src="img/icons/menuHamb.svg" alt=""></a></li> -->
+					</ul>
+					<div class="hamburger-menu">
+						<input id="menu__toggle" type="checkbox" />
+						<label class="menu__btn" for="menu__toggle">
+							<span></span>
+						</label>
+						<ul class="menu__box">
+							<li><a class="menu__item" href="#">Stays</a></li>
+							<li><a class="menu__item" href="#">Attractions</a></li>
+						</ul>
+					</div>
+
 				</div>
 			</header>
 			<h1 class="main-title">Discover stays <br>
 				to live, work or just relax</h1>
-			<form action="/" class="main-form">
-				<label for="city">Your destination or hotel name</label>
-				<label for="date">Check-in — Check-out</label>
-				<input type="search" id="city" placeholder="New York">
-				<input type="text" id="date" placeholder="Tue 15 Sept — Sat 19 Sept" data-range="true"
-					data-multiple-dates-separator=" - " class="datepicker-here">
-				<input type="text" placeholder="2 Adults — 0 Children — 1 Room" id="choice">
-				<button class="button">Search</button>
-			</form>
-			<form action="" class="mobile-form">
-				<div class="mobile-form__city">
-					<input type="text" placeholder="Your destination or hotel name">
+			<form action="" class='main-form'>
+				<div class="search-block search">
+					<p>
+						<input type="text" class="search-block__input" id="city" placeholder=" ">
+						<label for="city" class="search-block__label">Your destination or hotel name</label>
+					</p>
 				</div>
-				<div class="mobile-form__date">
-					<label for="mobile-datein">Check-in date</label>
-					<input type="text" placeholder="Tue 15 Sept 2020" id="mobile-datein">
+				<div class="search-block date">
+					<p>
+						<input type="text" class="search-block__input datepicker-here" id="check-in" placeholder=" ">
+						<label for="check-in" class="search-block__label">Check-in date</label>
+					</p>
+					<p>
+						<input type="text" class="search-block__input datepicker-here" id="check-out" placeholder=" ">
+						<label for="check-out" class="search-block__label">Check-out date</label>
+					</p>
 				</div>
-				<div class="mobile-form__date">
-					<label for="mobile-dateout">Check-out date</label>
-					<input type="text" placeholder="Fr 15 Dec 2020" id="mobile-dateout">
+				<div class="search-block people">
+					<p>
+						<input type="number" class="search-block__input" id="adults" placeholder=" ">
+						<label for="adults" class="search-block__label">Adults</label>
+					</p>
+					<p>
+						<input type="number" class="search-block__input" id="children" placeholder=" ">
+						<label for="children" class="search-block__label">Children</label>
+					</p>
+					<p>
+						<input type="number" class="search-block__input" id="rooms" placeholder=" ">
+						<label for="rooms" class="search-block__label">Room</label>
+					</p>
 				</div>
-				<div class="mobile-form__choice">
-					<div class="mobile-form__choice-item">
-						<label for="adults">Adults</label>
-						<input type="number" placeholder="1" id="adults">
-					</div>
-					<div class="mobile-form__choice-item">
-						<label for="children">Children</label>
-						<input type="number" placeholder="1" id="children">
-					</div>
-					<div class="mobile-form__choice-item">
-						<label for="room">Rooms</label>
-						<input type="number" placeholder="1" id="room">
-					</div>
-				</div>
-				<div class="mobile-form__btn">
-					<button class="mobile-btn">Search</button>
+				<div class="search-block button">
+					<button>Search</button>
 				</div>
 			</form>
 			<div class=" main-download">
@@ -167,7 +176,7 @@
 				<ul class="tabs__items">
 					<li class="tabs__item tabs__item-active">Regions</li>
 					<li class="tabs__item">Cities</li>
-					<li class="tabs__item">Places of interest</li>
+					<li class="tabs__item">Places</li>
 				</ul>
 			</div>
 			<div class="destinations-wrapper tabs__content tabs__content-active" id="regions">
@@ -244,11 +253,28 @@
 		</div>
 	</section>
 	<!-- Section -destinations end -->
+	<section class="sign-up">
+		<div class="container">
+			<div class="wrapper">
+				<div class="sign-up__login">
+					<img src="img/icons/Group.svg" alt="login"></div>
+				<div class="sign-up__descr">
+					<p>Sign up and get 20% off your first booking</p>
+					<button>Sign up</button>
+				</div>
+				<div class="close">
+					<a href="#"><img src="img/icons/close.svg" alt="close"></a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- Section - Sign Up end -->
 	<!-- Section - reviews -->
 	<section class="reviews">
 		<div class="container">
 			<h2>Guests reviews</h2>
-			<div class="reviews-wrapper">
+			<div class="reviews-wrapper slick-wrapper">
 				<div class="reviews-box">
 					<div class="reviews-box__background">
 						<img src="img/reviews/image.png" alt="hotel">
@@ -344,14 +370,57 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="arrow  arrow__right">
-					<span class="icon-chevron-thin-right"></span>
+				<div class="reviews-box">
+					<div class="reviews-box__background">
+						<img src="img/reviews/bali.jpg" alt="hotel">
+						<span>From 180 USD</span>
+					</div>
+					<div class="wrapper">
+						<div class="reviews-box__rating">
+							<div class="locate">
+								<span class="locate-name">The Viceoroy Bali </span>
+								<span class="locate-box">9,4</span>
+							</div>
+							<div class="rating">
+								<span class="rating-place">Bali, Indonesia</span>
+								<span class="rating-reviews">2158 reviews</span>
+							</div>
+						</div>
+						<div class="reviews-box__comment">
+							<div class="avatar">
+								<img src="img/reviews/avatar.svg" alt="">
+							</div>
+							<div class="author">
+								<span class="author-name">Donald Duck</span>
+								<span class="author-nation"><img src="img/reviews/ger.ico" alt=""> Germany</span>
+							</div>
+							<p>Efficient, friendly, professional, and appropriately attentive. Great hotel in a great location. Easy
+								access
+								to all the surrounding historical sites. Staff is fantastic. Will definitely stay at this location
+								during my
+								next stay in Marocco.</p>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</div>
 	</section>
 	<!-- Section - reviews end -->
+	<!-- Section .mobile-app start-->
+	<section class="mobile-app">
+		<div class="mobile-app__wrapper">
+			<div class="mobile-app__close">
+				<a href="#"><img src="img/icons/close.svg" alt=""></a></div>
+			<div class="mobile-app__img">TripHouse</div>
+			<div class="mobile-app__descr">Sign up in the app and get 20% off your first booking</div>
+			<div class="mobile-app__link"><a href="#">Install</a></div>
+		</div>
+	</section>
+	<!-- Sectio- .mobile-app end-->
+
+	<!-- Section - Sign Up start -->
+
 	<!-- Footer  -->
 	<footer>
 		<div class="container">
